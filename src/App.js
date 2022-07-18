@@ -1,9 +1,10 @@
 import './App.css';
+import Rotas from './route/Rotas'
 
 function App() {
   return (
     <div className="App">
-      oi
+      <Rotas/>
     </div>
   );
 }
