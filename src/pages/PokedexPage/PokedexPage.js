@@ -1,15 +1,35 @@
 import React from 'react'
-import {useNavigate} from 'react-router-dom'
+import logo from './img/logo.png'
+import Home from './img/home.png'
+import { useNavigate } from 'react-router-dom'
 import { goToHomePage } from '../../route/Coordinator'
-import { goToDetails } from '../../route/Coordinator'
+import './PKD.css' 
+
+
+
 export default function PokedexPage() {
     const changeToHome = useNavigate()
-    const changeToDetails = useNavigate()
+
     return(
         <div>
-            PokedexPage
-            <button onClick={() => {goToHomePage( changeToHome)}}>ir para home</button>
-            <button onClick={() => {goToDetails(changeToDetails)}}>ir para detalhes</button>
+            <div className='headPKD'>
+                <button className='BtnHomePKD' onClick={() => {goToHomePage( changeToHome)}}>
+                    <img className='imgBTNhome' src={Home}/>
+                </button>
+                
+                <img className='logoPKD' src={logo}/>
+                
+            </div>
+            <div className='Navbar'>
+                <div className='card1'>
+                    teste
+                
+                </div>
+            </div>
+            
+
+
+
         </div>
     )
 }
