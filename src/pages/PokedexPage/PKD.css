@@ -3,12 +3,12 @@
 }
 
 .headPKD {
-    background-color: white;
     height: 160px;
     width: 100%;
     left: 0px;
     top: 0px;
     border-radius: 0px;
+    
 }
 
 .Navbar {
@@ -20,10 +20,12 @@
 
 .BtnHomePKD {
     background-color: transparent;
-    -top: -50%;
+    padding-bottom: 1%;
     align-items:stretch;
     border: 0ch;
-    border-bottom: 1px solid ;      
+    border-bottom: 1px solid ;
+    margin-right: 20%;
+    margin-left: -30%;
 }
 
 .BtnHomePKD:hover{
@@ -31,10 +33,10 @@
 }
 
 .logoPKD {
-    height: 113px;
+    margin-top: 1%;
     width: 307px;
+    height: 113px;
     left: 566px;
     top: 21px;
-    border-radius: 0px;
 
 }

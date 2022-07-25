@@ -7,8 +7,19 @@ import './PKD.css'
 
 
 
-export default function PokedexPage() {
+export default function PokedexPage () {
     const changeToHome = useNavigate()
+
+
+        const pokedexStorage = JSON.parse(localStorage.getItem('pokedex'))
+      
+        const pokemonsList = pokedexStorage.map(pokemon => {
+          return (
+            <div key={pokemon.name}>
+              <PokemonCard pokeName={pokemon} />
+            </div>
+          )
+        })
 
     return(
         <div>
@@ -22,8 +33,7 @@ export default function PokedexPage() {
             </div>
             <div className='Navbar'>
                 <div className='card1'>
-                    teste
-                
+                    <ContainerGrid>{pokemonsList}</ContainerGrid>
                 </div>
             </div>
             
