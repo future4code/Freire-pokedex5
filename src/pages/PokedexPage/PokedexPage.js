@@ -30,7 +30,7 @@ export default function PokedexPage(props) {
             onClick={() => {goToHomePage( changeToHome)}}
           > Todos Pokemons
           </Button>
-        {/* <button onClick={() => {goToDetails(changeToDetails)}}>ir para detalhes</button> */}
+        
         </Conteudo>
            
             <Container>{pokeList.length > 0 ? pokeList : <P>Você não possui Pokémons</P>}</Container>
@@ -38,3 +38,5 @@ export default function PokedexPage(props) {
        
       </Div>
 </Divao>
+  );
+}
