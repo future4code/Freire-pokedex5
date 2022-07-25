@@ -1,35 +1,40 @@
 import React from 'react'
-import logo from './img/logo.png'
-import Home from './img/home.png'
 import { useNavigate } from 'react-router-dom'
 import { goToHomePage } from '../../route/Coordinator'
-import './PKD.css' 
-
-
-
-export default function PokedexPage() {
+import { goToDetails } from '../../route/Coordinator'
+import { CardPokemonPokedexPage } from '../../components/cardPokemonPokedexPage/CardPokemonPokedexPage'
+import {Div, Img, Container, Conteudo, Button, Divao, P} from "./styled";
+import logoPokemon from "../../constants/img/logoPokemon.png";
+export default function PokedexPage(props) {
     const changeToHome = useNavigate()
-
-    return(
-        <div>
-            <div className='headPKD'>
-                <button className='BtnHomePKD' onClick={() => {goToHomePage( changeToHome)}}>
-                    <img className='imgBTNhome' src={Home}/>
-                </button>
-                
-                <img className='logoPKD' src={logo}/>
-                
-            </div>
-            <div className='Navbar'>
-                <div className='card1'>
-                    teste
-                
-                </div>
-            </div>
+    const removePokemon = (id) => {
+        const newArray = props.pokemonList.filter((pokemon) => {
+            return pokemon.id !== id
             
+        })
+        props.setPokemonList(newArray)
+      }
 
-
-
-        </div>
-    )
-}
+    const pokeList = props.pokemonList.map((pokemon) => {
+        return( 
+            <CardPokemonPokedexPage pokemon = {pokemon} goToDetails = {goToDetails} removePokemon = {removePokemon}/>
+        )
+    })
+    return(
+      
+<Divao>
+        <Div>
+        <Conteudo>
+        <Img src={logoPokemon} alt="" />
+          <Button
+            onClick={() => {goToHomePage( changeToHome)}}
+          > Todos Pokemons
+          </Button>
+        {/* <button onClick={() => {goToDetails(changeToDetails)}}>ir para detalhes</button> */}
+        </Conteudo>
+           
+            <Container>{pokeList.length > 0 ? pokeList : <P>Você não possui Pokémons</P>}</Container>
+           
+       
+      </Div>
+</Divao>
