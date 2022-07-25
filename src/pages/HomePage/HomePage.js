@@ -3,6 +3,7 @@ import {useNavigate} from 'react-router-dom'
 import { goToPokedex } from '../../route/Coordinator'
 import { goToDetails } from '../../route/Coordinator'
 import logo from '../PokedexPage/img/logo.png'
+import '../PokedexPage/PKD.css'
 
 
 export default function HomePage() {
