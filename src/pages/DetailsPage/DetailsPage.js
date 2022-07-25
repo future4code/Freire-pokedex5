@@ -6,8 +6,15 @@ export default function DetailsPage() {
    const changeToHome = useNavigate()
     return(
         <div>
-            DetailsPage
-            <button onClick={() => {goToHomePage( changeToHome)}}>ir para home</button>
+            <header>
+
+                <h4> Detalhes </h4>
+
+            
+            <button onClick={() => {goToHomePage(changeToHome)}}>ir para home</button>
+
+            
+            </header>
         </div>
     )
 }

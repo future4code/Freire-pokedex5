@@ -1,0 +1,40 @@
+*{
+    margin: 0%;
+}
+
+.headPKD {
+    background-color: white;
+    height: 160px;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+}
+
+.Navbar {
+    background-color: #646464;
+    width: 100%;
+    height: 65ch
+
+}
+
+.BtnHomePKD {
+    background-color: transparent;
+    -top: -50%;
+    align-items:stretch;
+    border: 0ch;
+    border-bottom: 1px solid ;      
+}
+
+.BtnHomePKD:hover{
+    opacity: 75%;
+}
+
+.logoPKD {
+    height: 113px;
+    width: 307px;
+    left: 566px;
+    top: 21px;
+    border-radius: 0px;
+
+}
