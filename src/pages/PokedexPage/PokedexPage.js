@@ -38,3 +38,5 @@ export default function PokedexPage(props) {
        
       </Div>
 </Divao>
+  );
+}
