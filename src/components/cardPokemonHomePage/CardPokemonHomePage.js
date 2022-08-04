@@ -54,7 +54,7 @@ export const CardPokemonHomePage = (props) => {
   if (background1 === "water") {
     pokeType = waterIcon;
   }
-  if (background1 === "poison") {
+  if (background1 === "poison") {// poderia ter feito um switch case
     pokeType = poisonIcon;
   }
   if (background1 === "flying") {
